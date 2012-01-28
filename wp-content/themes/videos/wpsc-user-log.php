@@ -14,6 +14,7 @@ global $files, $separator, $purchase_log, $col_count, $products, $links; ?>
 <?php if (is_user_logged_in()): ?>
 <div class="wrap">
 	<div class="user-profile-links">
+		<a href="<?php bloginfo('url'); ?>/#channels-inside">Get Started!</a> |
 		<a href="<?php echo get_option( 'user_account_url' ); ?>"><?php _e('Purchase History','wpsc'); ?></a> |
 		<a href="<?php bloginfo('url'); ?>/profile">Change Password/Email</a>
 	</div>

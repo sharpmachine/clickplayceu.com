@@ -62,7 +62,7 @@
 				<h2>CLiCKceu makes it as easy as 1 - 2 - 3 to continue your medical education.</h2>
 				<div class="col">
 					<h3><span>1</span> Take the Pre-Test.</h3>
-					<p>The pre-test determines your pre-existing knowledge base. It also functions to give you an idea about where this course will be heading.</p>
+					<p>The pre-test is designed to determine your pre-existing knowledge base. It also functions to give you an idea about where this course will be heading.</p>
 					<img src="<?php bloginfo('template_directory'); ?>/images/test.jpg" width="280" height="186" alt="Test">
 				</div>
 				<div class="col">
@@ -82,7 +82,7 @@
 		<div id="channels-inside">
 			<div id="channels-wrapper">
 			<!-- featured category #1 -->
-			<h2>Select a Certification.</h2>
+			<h2>Select a Course.</h2>
 			<?php 
 				// $args = array(
 				 // 								'cat' 	=> array(-4,8,9),

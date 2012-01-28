@@ -1,23 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://localhost/clickplayceu.com/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/3.2.1" -->
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://localhost/clickplayceu.com/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/3.3.1" -->
 <!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.2.6" -->
-<!-- generated-on="January 28, 2012 7:29 pm" -->
+<!-- generated-on="January 28, 2012 9:00 pm" -->
 <!-- Debug: Total comment count: 0 -->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
 		<loc>http://localhost/clickplayceu.com/</loc>
-		<lastmod>2012-01-25T00:23:39+00:00</lastmod>
+		<lastmod>2012-01-28T20:58:02+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 <!-- Debug: Start Postings -->
 	<url>
-		<loc>http://localhost/clickplayceu.com/accreditation/</loc>
-		<lastmod>2012-01-25T00:23:39+00:00</lastmod>
+		<loc>http://localhost/clickplayceu.com/terms-of-use/</loc>
+		<lastmod>2012-01-28T20:58:02+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://localhost/clickplayceu.com/works/</loc>
-		<lastmod>2012-01-21T00:52:33+00:00</lastmod>
+		<loc>http://localhost/clickplayceu.com/privacy-policy/</loc>
+		<lastmod>2012-01-28T20:46:58+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://localhost/clickplayceu.com/about/</loc>
+		<lastmod>2012-01-28T20:36:38+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://localhost/clickplayceu.com/how-it-works/</loc>
+		<lastmod>2012-01-28T20:03:56+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://localhost/clickplayceu.com/accreditation/</loc>
+		<lastmod>2012-01-25T00:23:39+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -37,12 +55,6 @@
 	<url>
 		<loc>http://localhost/clickplayceu.com/pricing-plans/</loc>
 		<lastmod>2012-01-20T21:43:59+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.6</priority>
-	</url>
-	<url>
-		<loc>http://localhost/clickplayceu.com/about/</loc>
-		<lastmod>2011-12-15T20:18:48+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -98,25 +110,13 @@
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://localhost/clickplayceu.com/privacy-policy/</loc>
-		<lastmod>2011-11-25T17:54:23+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.6</priority>
-	</url>
-	<url>
-		<loc>http://localhost/clickplayceu.com/terms-of-use/</loc>
-		<lastmod>2011-11-25T17:53:00+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.6</priority>
-	</url>
-	<url>
-		<loc>http://localhost/clickplayceu.com/products-page/checkout/</loc>
+		<loc>http://localhost/clickplayceu.com/products-page/</loc>
 		<lastmod>2011-05-17T03:30:55+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://localhost/clickplayceu.com/products-page/</loc>
+		<loc>http://localhost/clickplayceu.com/products-page/checkout/</loc>
 		<lastmod>2011-05-17T03:30:55+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
