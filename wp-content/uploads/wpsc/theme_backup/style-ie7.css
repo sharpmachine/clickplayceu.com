@@ -1,0 +1,57 @@
+/********************************************************************************************* 
+
+Making Internet Explorer 7 Behave
+
+*********************************************************************************************/
+.sf-menu {
+padding: 0 0 5px 0;
+}
+
+#video-container-single {
+margin-top: -30px;
+}
+
+#video-top {
+margin-top: 30px;
+}
+
+.divider-margin {
+margin-bottom: 0;
+}
+
+.comment-author {
+margin-left: -970px;
+}
+
+.comment-meta {
+margin-left: -868px;
+}
+
+ol.commentlist li div.reply {
+margin-left: -868px;
+}
+
+#leave-reply p {
+margin-top: 15px;
+}
+
+#footer h3 {
+margin-top: 30px;
+}
+
+#sidebar-home {
+margin-bottom: 30px;
+}
+
+#sidebar-single, #sidebar-multiple, #sidebar-page {
+padding-bottom: 30px;
+}
+
+#leave-reply {
+padding: 0 12px 0 12px;
+margin: 0 0 30px 0;
+}
+
+#leave-reply p {
+padding: 0 0 15px 0;
+}

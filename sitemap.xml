@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://clickceu.com/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/3.2.1" -->
+<!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.2.6" -->
+<!-- generated-on="December 15, 2011 8:19 pm" -->
+<!-- Debug: Total comment count: 0 -->
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
+		<loc>http://clickceu.com/</loc>
+		<lastmod>2011-12-15T20:18:48+00:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+<!-- Debug: Start Postings -->
+	<url>
+		<loc>http://clickceu.com/about/</loc>
+		<lastmod>2011-12-15T20:18:48+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://clickceu.com/pricing-plans/</loc>
+		<lastmod>2011-12-14T00:03:09+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://clickceu.com/faq/</loc>
+		<lastmod>2011-12-13T23:57:07+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 160: Comments: 0 of 0 = 0 points -->
+	<url>
+		<loc>http://clickceu.com/2011/08/the-scourge-of-mrsa/</loc>
+		<lastmod>2011-12-13T18:33:16+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 285: Comments: 0 of 0 = 0 points -->
+	<url>
+		<loc>http://clickceu.com/2011/12/online-healthcare-continuing-education-video-training/</loc>
+		<lastmod>2011-12-08T18:43:42+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 176: Comments: 0 of 0 = 0 points -->
+	<url>
+		<loc>http://clickceu.com/2011/08/respiratory-system-part-2-asthma-pneumonia-copd/</loc>
+		<lastmod>2011-12-07T18:44:41+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 168: Comments: 0 of 0 = 0 points -->
+	<url>
+		<loc>http://clickceu.com/2011/08/respiratory-system-part-1-the-foundation/</loc>
+		<lastmod>2011-12-07T18:43:59+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://clickceu.com/profile/</loc>
+		<lastmod>2011-12-04T17:35:49+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://clickceu.com/login/</loc>
+		<lastmod>2011-12-04T06:48:34+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://clickceu.com/cart/</loc>
+		<lastmod>2011-11-26T22:00:52+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://clickceu.com/contact-us/</loc>
+		<lastmod>2011-11-26T18:39:22+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://clickceu.com/privacy-policy/</loc>
+		<lastmod>2011-11-25T17:54:23+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://clickceu.com/terms-of-use/</loc>
+		<lastmod>2011-11-25T17:53:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://clickceu.com/products-page/checkout/</loc>
+		<lastmod>2011-05-17T03:30:55+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://clickceu.com/products-page/</loc>
+		<lastmod>2011-05-17T03:30:55+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://clickceu.com/products-page/transaction-results/</loc>
+		<lastmod>2011-05-17T03:30:55+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://clickceu.com/products-page/your-account/</loc>
+		<lastmod>2011-05-17T03:30:55+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: End Postings -->
+<!-- Debug: Start Custom Pages -->
+<!-- Debug: End Custom Pages -->
+<!-- Debug: Start additional URLs -->
+<!-- Debug: End additional URLs -->
+</urlset>
