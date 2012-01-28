@@ -6,8 +6,8 @@ Tags: registration, profile, user registration, custom field registration, custo
 custom registration, custom registration form, custom registration page, extra user fields, registration page, user custom fields, user listing, user login, user registration form, front-end login, 
 front-end register, front-end registration, frontend edit profile, edit profile
 Requires at least: 3.1
-Tested up to: 3.2
-Stable tag: 1.1.12
+Tested up to: 3.3
+Stable tag: 1.1.24
 
 Simple to use profile plugin allowing front-end login, registration and edit profile by using shortcodes. 
  
@@ -89,6 +89,18 @@ This plugin only adds/removes fields in the front-end. The default information-f
 7. Logged in Page: screenshot7.jpg
 
 == Changelog ==
+= 1.1.24 = 
+Wordpress 3.3 support
+
+= 1.1.23 =
+Consecutive bugfixes.
+
+= 1.1.14 =
+Compatibility fix for WP version 3.3
+
+= 1.1.13 = 
+Minor changes to different parts of the plugin. Also updated the english translation.
+
 = 1.1.12 = 
 Minor changes to readme file.
 

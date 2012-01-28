@@ -1,14 +1,15 @@
 <?php
 /*
-Plugin Name: EXAM - Online test system
-Plugin URI: http://www.bionicsheep.com
+Plugin Name: HEXAM - Online test system
+Plugin URI: http://www.webania.net/hexam/
 Description: It lets to developer to provide online exams,quizzes and to save user result in mysql database.
-Version: 1.2.4
-Author: Michael Painter
-Author URI: http://www.bionicsheep.com
+Version: 1.3
+Author: Elvin Haci
+Author URI: http://www.webania.net/hexam
 License: GPL2
 */
-/* 
+/*  Copyright 2010-2012,  Elvin Haci  (email : elvinhaci@hotmail.com)
+
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
     published by the Free Software Foundation.
@@ -22,28 +23,37 @@ License: GPL2
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
- 
-function hexam($content = '') {
+ function hexam($atts,$content = '') {
   global $wpdb;
   global $wp_query;
     
+    extract(shortcode_atts(array(
+        "id" => '1'
+    ), $atts));
+  
+  
   $replacement = '';
-  $newid=1;
+  
+  $newid=$id;
   include(WP_PLUGIN_DIR . "/" . plugin_basename(dirname(__FILE__))."/content.php");
-  $lefthex=strpos($content,"[exam id=");
-  $righthex=strpos($content,"exam]");
+  /*
+  $lefthex=strpos($content,"[hexam id=");
+  $righthex=strpos($content,"hexam]");
   if ($lefthex!==false and $righthex!==false) {
-    $newid=substr($content,$lefthex+9,$righthex-$lefthex-10);
+    $newid=substr($content,$lefthex+10,$righthex-$lefthex-11);
   }
+  */
+  
   $testnamerow=$wpdb->get_row("select testname,testtype from wp_hexam_testnames where id=".$newid);
   $testname=$testnamerow->testname;
   $testtype=$testnamerow->testtype;
   
- if ($testtype=='QUIZ' or is_user_logged_in()) {
-
+  
+ if ($testtype=='QUIZ' or  is_user_logged_in()) {
+     
+  
+  
   if (!isset($_POST["qid1"])) {
-  	$replacement=$replacement.'<h3><a href="#" id="slick-slidetoggle">Take Test!</a></h3>';
-  	$replacement=$replacement.'<div id="toggle-search" style="padding:10px;"><p>id='.$newid.'</p>';
     $replacement=$replacement.'<form method="post" action="" name="hexamform">';
     $testsnet=$wpdb->get_results("select * from wp_hexam_questions where testid=".$newid." order by id asc");
     $i=0;
@@ -82,49 +92,24 @@ function hexam($content = '') {
 	      $wpdb->query("select ID from wp_hexam_userdata where testid=".$newid." and userid=".get_current_user_id());
 		  if ($wpdb->num_rows==0) {
 	          $wpdb->query("insert into wp_hexam_userdata(userid,testid,point) values(".get_current_user_id().",".$newid.",".$point.")");
-	          //message for score
-	          $percent = $point / $question_count;
-			  if ($percent >= .7) {
-			  	$replacement=$replacement.'<br><b>'.$word["hcongrat"].'</b>';
-			  } else {
-			  	$replacement=$replacement.'<br><b>'.$word["hbest"].'</b>';	
-			  }
 	      } 
 		  else {
-				//compare previous scores
-		  		$points = $wpdb->get_row("select point from wp_hexam_userdata where testid=".$newid." and userid=".get_current_user_id());
-		  		$percent = @($points->point / $question_count);
-		  		$replacement=$replacement.'<p>Best so far: '.$points->point.'. Points this time: '.$point.'. Percent: '.$percent.'</p>';
-		  		//update query if points is greater than previous entry
-		  		if ($point > $points->point) {
-		  			$wpdb->query("update wp_hexam_userdata set point = ".$point." where testid=".$newid." and userid=".get_current_user_id());
-		  		} 
-		  		if ($percent >= .7) {
-					$replacement=$replacement.'<br><b>'.$word["hcongrat"].'</b>';
-				} else {
-					$replacement=$replacement.'<br><b>'.$word["hbest"].'</b>';	
-				}
-		  		//$replacement=$replacement.'<br><b>'.$word["hbut"].'.</b>';
-		  		
-		}
-		$prodid = $wpdb->get_row("select prodid from wp_hexam_testnames where id =".$newid);
-		//$guid = $wpdb->get_row("select guid from wp_posts where id = ".$prodid->prodid);
-		//$replacement=$replacement.'<p>productid:'.$prodid->prodid.' and guid: '.$guid->guid.'</p>';	  
-		//$replacement=$replacement.'		<div class="wpsc_buy_button_container">';
-		//$replacement=$replacement.'			<input id="product_'.$prodid->prodid.'_submit_button" class="wpsc_buy_button" type="submit" name="Buy" value="Add To Cart">';
-		//$replacement=$replacement.'			<div class="wpsc_loading_animation">';
-		//$replacement=$replacement.'		</div>';
-		$replacement=$replacement.'[add_to_cart='.$prodid->prodid.']</div>';
-
+               $replacement=$replacement.'<br><b>'.$word["hbut"].'.</b>';
+		}		  
 	 }
 	}
  }
  else {
    $replacement='<span style="color:#FF0000"><b>'.$word["hlogin"].'!</b></span>';
  }
-    $pattern="[exam id=".$newid." exam]";
-	return str_replace($pattern, $replacement, $content);
+    
+	return $replacement;
 }
+
+add_shortcode('hexam', 'hexam');
+
+
+
 
 function hexam_admin() {
   global $wpdb;
@@ -136,14 +121,14 @@ function hexam_admin() {
       $wpdb->query( "create table if not exists wp_hexam_questions (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,testid INT,content TEXT,answers TEXT,correct INT) ENGINE = MYISAM CHARACTER SET utf8 COLLATE utf8_general_ci");
       update_option("hexam_tables", '2');
   }
-  add_menu_page('admin-menu', 'EXAM settings', 5, __FILE__, 'hexam_settings');
+  add_menu_page('admin-menu', 'HEXAM settings', 5, __FILE__, 'hexam_settings');
 }
 
 function hexam_settings() {
   global $wpdb;
   global $wp_query;
   $cuurl="?page=hexam/hexam.php";
-  echo '<div class="wrap"><h2>Exam settings</h2>';
+  echo '<div class="wrap"><h2>Hexam settings</h2>';
 	  ?>
 <form name="hexamform1" method="post" action="<?php echo $cuurl;?>&do=edittest">
 <br><a href="<?php echo $cuurl;?>">Plugin settings home page</a><br><br>
@@ -165,8 +150,13 @@ if ($testcount>0)
 </form>
 <?php
 	  
+	  
+	  
+	  
+	  
 $doing='';
 if (isset($_GET["do"])) {$doing=$_GET["do"];} 
+
 
 //USER DATA PART
 if ($doing=='userdata') {
@@ -177,8 +167,13 @@ echo '<h3>Users data</h3>';
    foreach ($usernet as $unet) {
    echo  '<b>'.$unet->dn.'-'.$unet->pt.'</b><br>';
   }
-  echo 'You can copy the results from here and post it in your site<br>'; 
+  
+  
+  echo 'You can copy the results from here and post it in your site<br>';
+  
+ 
 }
+
 
 //DELETE PART
 elseif ($doing=='deltest') {
@@ -221,9 +216,11 @@ echo '<h3>Edit part</h3>';
 	 $testtype=$testnamerow->testtype;
     ?>
     <form method="post" action="" name="hexamform">
-    Test name(or description): <input name="tdesc" type="text" value="<?php echo $testname;?>">  (<a href="<?php echo $cuurl;?>&do=deltest&edittest=<?php echo $newid;?>">Delete this test</a>)
+    Test name(or description): <input name="tdesc" type="text" value="<?php echo $testname;?>">  (<a href="<?php echo $cuurl;?>&do=deltest&edittest=<?php echo $newid;?>">Delete this test</a>, <a href="<?php echo $cuurl;?>&do=userdata&edittest=<?php echo $newid;?>">See user results for this test</a>)
+    
 	<br>
-	<input type="hidden" name="ttype" value="QUIZ">
+	Test type: <input name="ttype" type="text" value="<?php echo $testtype;?>"> (1. Type QUIZ if you want users to see their results after submitting.
+	2. Type TEST if you want to use this test as a competition, to hide results from users, to publish it later by yourself. In this case only logged-in users will be able to see your test.)
 	<input type="hidden" name="edittest" value="<?php echo $newid;?>">
     <br><br>
     <?php
@@ -242,7 +239,6 @@ echo '<h3>Edit part</h3>';
     <input type="hidden" name="acount" value="<?php echo (sizeof($answers_ed)-1);?>">
     <input type="submit" name="Submit this exam" value="Submit this exam">
     </form>
-    <p>Copy and paste this into that page you want to see this test: [exam id=<?php echo $newid; ?> exam]</p>
     <?php
    }
 
@@ -253,10 +249,7 @@ echo '<h3>Create test</h3>';
   if (isset($_POST["tdesc"])) {
     $testname=$wpdb->escape($_POST["tdesc"]);
 	$testtype=$wpdb->escape($_POST["ttype"]);
-	//query to get prodid - SELECT * FROM `wp_posts` WHERE post_status = 'publish' and post_title = 'How to Break a Horses Hearts'
-	$prodid = $wpdb->get_row("SELECT id FROM wp_posts WHERE post_type = 'wpsc-product' and post_status = 'publish' and post_title = '.$testname.'");
-	
-    $wpdb->query("insert into wp_hexam_testnames(`testname`,`testtype`,`prodid`) values('".$testname."','".$testtype."','".$prodid->id."')");
+    $wpdb->query("insert into wp_hexam_testnames(`testname`,`testtype`) values('".$testname."','".$testtype."')");
     $newidrow = $wpdb->get_row("SELECT id FROM wp_hexam_testnames order by id desc limit 1;");
     $newid=$newidrow->id;
     $insert='';
@@ -284,8 +277,9 @@ echo '<h3>Create test</h3>';
   else {
     ?>
     <form method="post" action="" name="hexamform">
-    Test name (or description): <input name="tdesc" type="text"> <br>
-	<input type="hidden" name="ttype" value="QUIZ">
+    Test name(or description): <input name="tdesc" type="text"> <br>
+	Test type<input name="ttype" type="text" value="QUIZ"> (1. Type QUIZ if you want users to see their results after submitting.
+	2. Type TEST if you want to use this test as a competition: to hide results from users; to publish it later by yourself. In this case only logged-in users will be able to see your test.)
     <input name="qcount" type="hidden" value="<?php echo htmlentities($_POST["qcount"]);?>">
     <input name="acount" type="hidden" value="<?php echo htmlentities($_POST["acount"]);?>">
     <br><br>
@@ -305,9 +299,24 @@ echo '<h3>Create test</h3>';
 }
 
 echo'  <br><br>
-You can make your text rich, you can use images in test questions or answers.';
+HEXAM plugin supports HTML tags. You can make your text rich, you can use images in test questions or answers.
+<br><br>
+When you create or edit post or page, type in there just this: [hexam id=test_number hexam] , that\'s all. (test_number is number:= 1,2,3...)
+<br><br>
+content.php file of the plugin contains user-interface content. You can edit or translate user interface words with editing it.
+<br><br>
+<a href="http://www.webania.net/hexam">Plugin Homepage</a></div>
+<br>
+<a name="donate" id="donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=EVZMRZ2YFUP84&lc=AZ&item_name=Webania%2enet&item_number=1&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
+">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</a>
+
+';
+
 
 }
 add_action('admin_menu', 'hexam_admin');
-add_filter('the_content', 'hexam');
+//add_filter('the_content', 'hexam');
 ?>
