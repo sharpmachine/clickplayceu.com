@@ -64,7 +64,6 @@
 			<div class="entry-meta">
 				<?php twentyten_posted_on(); ?>
 			</div><!-- .entry-meta -->
-
 			<div class="entry-content">
 <?php if ( post_password_required() ) : ?>
 				<?php the_content(); ?>

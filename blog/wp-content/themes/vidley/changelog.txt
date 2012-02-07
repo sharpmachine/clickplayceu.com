@@ -1,0 +1,31 @@
+Version 1.2.4 (02.24.11)
+FIXED: Menus Behind Embedded Videos (functions.php)
+
+
+Version 1.2.3 (10.20.10)
+FIXED: Update Notifications Server Incompatibility (functions.php)
+
+
+Version 1.2.2 (07.26.10)
+NEW: Auto-Update Notifications via the WordPress Admin (functions.php, update-notify.php)
+
+
+Version 1.2.1 (07.02.10)
+FIXED: Theme Options Bug for Windows Servers and WordPress 3.0 (functions.php)
+
+
+Version 1.2 (06.21.10)
+NEW: WordPress 3.0 Menu Management Compatibility
+NEW: Custom Background Color/Image Configuration
+NEW: Custom Content and Text Color Configuration
+NEW: Fancy Image Integration for Linked Images
+REVISED: Options Page Layout
+
+
+Version 1.1 (05.05.10)
+NEW: Added "Continue Reading" Link for Use With the "More" Tag (index.php)
+FIXED: Added Color and Background Classes for Hyperlinks (style.css)
+
+
+Version 1.0 (04.01.10)
+NEW: Initial Release
