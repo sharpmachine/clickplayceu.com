@@ -31,18 +31,27 @@
 				</div>
 			<?php endif; ?> 
 			
-				<div class="single-page">
-					<ul>
-					<?php query_posts('post_type=state_requirements&post_per_page=2'); ?>
-					<?php if (have_posts()) : ?>
-						<?php while (have_posts()) : the_post(); ?>
-							
-								<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-							
-							
-						<?php endwhile; endif; ?>
+			
+				<div class="state-list">
+
+							<?php query_posts('post_type=state_requirements'); ?>
+<?php $count = 0;
+ 
+while(have_posts()) : the_post(); ?>
+ 
+<div class="box<?php if( $count%4 == 0) { echo '-1'; }; $count++; ?>">
+ 
+<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+ 
+</div>
+ 
+<?php endwhile; ?>
+
+					
 						
-						</ul>
+						
+						
+
 				</div>
 				
 					</div>
