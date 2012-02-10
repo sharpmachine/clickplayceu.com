@@ -347,7 +347,7 @@ function transaction_results( $sessionid, $display_to_screen = true, $transactio
 					}
 					//certificate link
 					if ((empty($row['custom_message'])) || (get_post_meta($row['prodid'], 'Credits') > 0)) {	
-						$img_file = WP_CONTENT_DIR . "/uploads/certificates/Certificate-20111203.png";
+						$img_file = WP_CONTENT_DIR . "/uploads/certificates/Certificate-20120209.png";
 					   	//$current_user = wp_get_current_user();
 						
 						$meta_data = '';
