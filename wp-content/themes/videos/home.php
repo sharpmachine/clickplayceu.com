@@ -59,7 +59,7 @@
 	</div> <!-- video-container -->
 	
 	<div id="easy-steps">
-				<h2>CLiCKceu makes it as easy as 1 - 2 - 3 to continue your medical education.</h2>
+				<h2>CLiCKPLAYceu makes it as easy as 1-2-3 to receive your continuing education.</h2>
 				<div class="col">
 					<h3><span>1</span> Take the Pre-Test.</h3>
 					<p>The pre-test is designed to determine your pre-existing knowledge base. It also functions to give you an idea about where this course will be heading.</p>

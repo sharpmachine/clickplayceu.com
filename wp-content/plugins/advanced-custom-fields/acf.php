@@ -3,7 +3,7 @@
 Plugin Name: Advanced Custom Fields
 Plugin URI: http://www.advancedcustomfields.com/
 Description: Fully customise WordPress edit screens with powerful fields. Boasting a professional interface and a powerfull API, it’s a must have for any web developer working with WordPress.Field types include: Wysiwyg, text, textarea, image, file, select, checkbox, page link, post object, date picker, color picker and more!
-Version: 3.0.7
+Version: 3.1.1
 Author: Elliot Condon
 Author URI: http://www.elliotcondon.com/
 License: GPL
@@ -45,7 +45,7 @@ class Acf
 		$this->dir = plugins_url('',__FILE__);
 		$this->siteurl = get_bloginfo('url');
 		$this->wpadminurl = admin_url();
-		$this->version = '3.0.7';
+		$this->version = '3.1.1';
 		$this->upgrade_version = '3.0.0'; // this is the latest version which requires an upgrade
 		
 		
@@ -203,7 +203,7 @@ class Acf
 	function admin_menu() {
 	
 		// add acf page to options menu
-		add_menu_page(__("Custom Fields",'acf'), __("Custom Fields",'acf'), 'manage_options', 'edit.php?post_type=acf', false, false, 81);
+		add_utility_page(__("Custom Fields",'acf'), __("Custom Fields",'acf'), 'manage_options', 'edit.php?post_type=acf');
 		add_submenu_page('edit.php?post_type=acf', __('Settings','wp3i'), __('Settings','wp3i'), 'manage_options','acf-settings',array($this,'admin_page_settings'));
 		add_submenu_page('edit.php?post_type=acf', __('Upgrade','wp3i'), __('Upgrade','wp3i'), 'manage_options','acf-upgrade',array($this,'admin_page_upgrade'));
 		
@@ -820,13 +820,13 @@ class Acf
 		
 		// do not save if this is an auto save routine
 		if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
-
+		
 		// only save once! WordPress save's twice for some strange reason.
 		global $flag;
 		if ($flag != 0) return $post_id;
 		$flag = 1;
 		
-		// set post ID if is a revision
+		// set post ID if is a revision		
 		if(wp_is_post_revision($post_id)) 
 		{
 			$post_id = wp_is_post_revision($post_id);
