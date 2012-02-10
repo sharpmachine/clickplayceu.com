@@ -391,6 +391,8 @@ endif;
       <?php endif; ?>
       <?php do_action('wpsc_inside_shopping_cart'); ?>
 
+	<h
+
       <?php  //this HTML displays activated payment gateways   ?>
       <?php if(wpsc_gateway_count() > 1): // if we have more than one gateway enabled, offer the user a choice ?>
          <tr>
@@ -414,6 +416,8 @@ endif;
             </tr></td>
          <?php else: // otherwise, there is no choice, stick in a hidden form ?>
             <tr><td colspan="2" class='wpsc_gateway_container'>
+            <h3><?php _e('Payment Type', 'wpsc');?></h3>
+
             <?php while (wpsc_have_gateways()) : wpsc_the_gateway(); ?>
                <input name='custom_gateway' value='<?php echo wpsc_gateway_internal_name();?>' type='hidden' />
 
