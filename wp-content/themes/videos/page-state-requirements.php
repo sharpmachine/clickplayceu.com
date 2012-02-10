@@ -19,41 +19,32 @@
 					
 					<div class="entry">
 						<?php the_content('Continue Reading'); ?>
-						
-						
-						
 						<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 					</div>
 				</div> <!-- post -->
 				
 				<?php endwhile; ?>
 			<?php else : ?>
-				
-				
 			
 				<div class="single-postorpage">
 					<h2>Sorry, but you are looking for something that isn't here.</h2>
 				</div>
-				
 			<?php endif; ?> 
 			
-			
-			<?php query_posts('post_type=state_requirements'); ?>
-			<?php if (have_posts()) : ?>
-			
-	<?php while (have_posts()) : the_post(); ?>
-			
-		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-			
-	<?php endwhile; ?>
-			
-		<?php // Navigation ?>
-			
-	<?php else : ?>
-			
-		<?php // No Posts Found ?>
-			
-<?php endif; ?>
+				<div class="single-page">
+					<ul>
+					<?php query_posts('post_type=state_requirements&post_per_page=2'); ?>
+					<?php if (have_posts()) : ?>
+						<?php while (have_posts()) : the_post(); ?>
+							
+								<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+							
+							
+						<?php endwhile; endif; ?>
+						
+						</ul>
+				</div>
+				
 					</div>
 					
 				</div> <!-- channels-inside -->
