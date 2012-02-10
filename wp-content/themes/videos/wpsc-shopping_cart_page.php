@@ -398,6 +398,7 @@ endif;
          <tr>
          <td colspan='2' class='wpsc_gateway_container'>
             <h3><?php _e('Payment Type', 'wpsc');?></h3>
+
             <?php while (wpsc_have_gateways()) : wpsc_the_gateway(); ?>
                <div class="custom_gateway">
                      <label><input type="radio" value="<?php echo wpsc_gateway_internal_name();?>" <?php echo wpsc_gateway_is_checked(); ?> name="custom_gateway" class="custom_gateway"/><?php echo wpsc_gateway_name(); ?> 
@@ -413,6 +414,8 @@ endif;
                   <?php endif; ?>
                </div>
             <?php endwhile; ?>
+		<img src="<?php echo site_url('/wp-content/themes/videos/wpsc-images/credit_card_logos.png'); ?>" />
+		<br /><br />
             </tr></td>
          <?php else: // otherwise, there is no choice, stick in a hidden form ?>
             <tr><td colspan="2" class='wpsc_gateway_container'>
@@ -427,6 +430,8 @@ endif;
                      </table>
                   <?php endif; ?>
             <?php endwhile; ?>
+		<img src="<?php echo site_url('/wp-content/themes/videos/wpsc-images/credit_card_logos.png'); ?>" />
+		<br /><br />
          </td>
          </tr>
          <?php endif; ?>
