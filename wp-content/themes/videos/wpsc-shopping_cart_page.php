@@ -86,7 +86,7 @@ endif;
          </td>
       </tr>
       <tr class="wpsc_total_before_shipping">
-	      <td colspan="3"><?php _e('Cost before shipping:','wpsc'); ?></td>
+	      <td colspan="3"><?php _e('Total:','wpsc'); ?></td>
 	      <td colspan="3" class="wpsc_total_amount_before_shipping"><?php echo wpsc_cart_total_widget(false,false,false);?></td>
       </tr>
    <?php endif; ?>
