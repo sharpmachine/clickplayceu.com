@@ -939,7 +939,7 @@ class wpsc_checkout {
 	}
 
 	function rewind_checkout_items() {
-		$_SESSION['wpsc_checkout_error_messages'] = array( );
+		//$_SESSION['wpsc_checkout_error_messages'] = array( );
 		$this->current_checkout_item = -1;
 		if ( $this->checkout_item_count > 0 ) {
 			$this->checkout_item = $this->checkout_items[0];
