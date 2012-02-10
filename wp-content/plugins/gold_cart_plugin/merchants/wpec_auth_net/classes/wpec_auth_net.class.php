@@ -758,6 +758,7 @@ EOF;
 			$selected_month = "<option value='{$auth_net['expiry']['month']}' selected>{$auth_net['expiry']['month']}</option>\n";
 			$selected_year  = "<option value='{$auth_net['expiry']['year']}' selected>{$auth_net['expiry']['year']}</option>\n";
 		}
+	$question_image = site_url('/wp-content/themes/videos/wpsc-images/question_blue.png');
 	return <<<EOF
 	<div id='creditCardNew'>
 		<table border='0'>
@@ -800,7 +801,7 @@ EOF;
 		</tr>
 		<tr>
 			<td class='wpsc_CC_details'>CVV *</td>
-			<td><input type='text' size='4' value='' maxlength='4' name='auth_net[creditCard][card_code]' class='authNetPaymentInput'/>
+			<td><input type='text' size='4' value='' maxlength='4' name='auth_net[creditCard][card_code]' class='authNetPaymentInput'/> <a href="#" title="If you have a credit card, enter the three-digit number on the back.  If you have an American Express&reg;, enter the four-digit number on the front." id="cvv_tooltip" onclick="return false;"><img src="{$question_image}" /></a>
 			</td>
 		</tr>
 		</table>

@@ -505,3 +505,7 @@ endif;
 do_action('wpsc_bottom_of_shopping_cart');
 
 ?>
+<script src="<?php echo site_url('/wp-content/themes/videos/scripts/tooltipsy.min.js'); ?>"></script>
+<script>
+jQuery('#cvv_tooltip').tooltipsy();
+</script>
