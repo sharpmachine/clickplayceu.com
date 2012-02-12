@@ -35,17 +35,29 @@
 				<div class="state-list">
 
 							<?php query_posts('post_type=state_requirements'); ?>
+
+<div class="req-col">
 <?php $count = 0;
  
-while(have_posts()) : the_post(); ?>
+while(have_posts()) : the_post();
+?>
+
+<?php if ($count % 2 == 0 && $count != 0): ?>
+</div>
+<div class="req-col">
+<?php endif; ?>
  
-<div class="box<?php if( $count%4 == 0) { echo '-1'; }; $count++; ?>">
+<div class="box">
  
 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
  
 </div>
  
-<?php endwhile; ?>
+<?php 
+$count++;
+endwhile;
+?>
+</div>
 
 					
 						
