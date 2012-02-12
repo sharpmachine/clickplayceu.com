@@ -1,7 +1,7 @@
 	<div id="footer">
 		<div id="footer-inside">
 			<?php if (get_option(THEME_PREFIX . "copy_text")) { ?>
-				<p>&copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?> - A division of Cosine Health Strategies, LLC.  |  <a href="<?php bloginfo('url'); ?>/how-it-works">How It Works</a> | <a href="<?php bloginfo('url'); ?>/about">About</a> | <a href="<?php bloginfo('url'); ?>/faq">FAQ</a> | <a href="<?php bloginfo('url'); ?>/privacy-policy">Privacy Policy</a> | <a href="<?php bloginfo('url'); ?>/terms-of-use">Terms of Use</a> | <a href="<?php bloginfo('url'); ?>/contact-us">Contact Us</a></p>
+				<p>&copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?> - A division of Cosine Health Strategies, LLC.  |  <a href="<?php bloginfo('url'); ?>/how-it-works">How It Works</a> | <a href="<?php bloginfo('url'); ?>/state-requirements">State Requirements</a> | <a href="<?php bloginfo('url'); ?>/about">About</a> | <a href="<?php bloginfo('url'); ?>/faq">FAQ</a> | <a href="<?php bloginfo('url'); ?>/privacy-policy">Privacy Policy</a> | <a href="<?php bloginfo('url'); ?>/terms-of-use">Terms of Use</a> | <a href="<?php bloginfo('url'); ?>/contact-us">Contact Us</a></p>
 			<?php } ?>
 			
 			<?php if ( get_option(THEME_PREFIX . "footer_text") ) : ?>

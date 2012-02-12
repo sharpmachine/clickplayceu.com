@@ -42,7 +42,7 @@
 while(have_posts()) : the_post();
 ?>
 
-<?php if ($count % 2 == 0 && $count != 0): ?>
+<?php if ($count % 14 == 0 && $count != 0): ?>
 </div>
 <div class="req-col">
 <?php endif; ?>
