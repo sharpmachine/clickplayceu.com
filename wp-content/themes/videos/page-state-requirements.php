@@ -21,19 +21,11 @@
 						<?php the_content('Continue Reading'); ?>
 						<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 					</div>
-				</div> <!-- post -->
-				
-				<?php endwhile; ?>
-			<?php else : ?>
-			
-				<div class="single-postorpage">
-					<h2>Sorry, but you are looking for something that isn't here.</h2>
-				</div>
-			<?php endif; ?> 
-			
-			
-				<div class="state-list">
 
+				
+				<?php endwhile; endif; ?> 
+			
+			
 							<?php query_posts('post_type=state_requirements'); ?>
 
 <div class="req-col">
