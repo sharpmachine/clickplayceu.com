@@ -8,7 +8,7 @@
 	<div id="footer">
 		<div id="footer-inside">
 			<?php if (get_option(THEME_PREFIX . "copy_text")) { ?>
-				<p>&copy; <?php echo date("Y"); ?> <?php echo get_option(THEME_PREFIX . "copy_text"); ?> | <a href="<?php bloginfo('url'); ?>/privacy-policy">Privacy Policy</a> | <a href="<?php bloginfo('url'); ?>/terms-of-use">Terms of Use</a></p>
+				<p class="legal">&copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?> - A division of Cosine Health Strategies, LLC.  <?php wp_nav_menu( array( 'container_class' => 'footer-menu', 'theme_location' => 'primary' , 'before' => '  | ' , 'menu_class' => 'footer-link-menu' ) ); ?>
 			<?php } ?>
 			
 			<?php if ( get_option(THEME_PREFIX . "footer_text") ) : ?>

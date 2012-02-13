@@ -95,13 +95,13 @@ a:visited { text-decoration: none; }
   margin: 0px auto;
 }
 #header-left {
-  width: 350px;
+  width: 503px;
   float: left;
   padding: 15px 0 30px 0;
 }
 #header-right {
-  width: 610px;
-  float: left;
+  width: 430px;
+  float: right;
 }
 #navigation {
   width: 100%;

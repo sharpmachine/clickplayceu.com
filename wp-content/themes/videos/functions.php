@@ -289,7 +289,7 @@ function custom_logo() {
 add_action('admin_head', 'custom_logo');
 
 function modify_footer_admin () {
-  echo 'CLiCKceu is a service provided by Cosine Health Strategies.';
+  echo 'CLiCKPLAYceu is a service provided by Cosine Health Strategies.';
   echo '  Need Help?  <a href="../contact-us">Contact Us</a>.';
 }
 
@@ -339,18 +339,33 @@ function help_dashboard_widget_function() {
 	";
 } 
 
+
 // Create the function use in the action hook
 function help_add_dashboard_widgets() {
 	wp_add_dashboard_widget('help_dashboard_widget', 'Need Help?', 'help_dashboard_widget_function');	
 } 
 
 // Hook into the 'wp_dashboard_setup' action to register our other functions
-add_action('wp_dashboard_setup', 'help_add_dashboard_widgets' );
+
+ if(in_array('administrator', $current_user->roles))
+  {
+    add_action('wp_dashboard_setup', 'help_add_dashboard_widgets' );
+  }
 
 // navigation menu
 if (function_exists('register_nav_menu')) {
 register_nav_menu('primary', __('Footer'));
 };
 
+function remove_dashboard_widgets(){
+  global$wp_meta_boxes;
+  unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
+  unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
+  unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
+  unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']); 
+  unset($wp_meta_boxes['dashboard']['normal']['core']['yoast_db_widget']);
+}
+
+add_action('wp_dashboard_setup', 'remove_dashboard_widgets');
 
 ?>

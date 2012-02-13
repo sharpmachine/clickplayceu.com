@@ -151,7 +151,7 @@
     		<?php if ( get_option(THEME_PREFIX . "logo_txt") ) : ?>
     			<h1><a href="<?php echo get_option('home'); ?>/" title="Home" ><?php echo get_option(THEME_PREFIX . "logo_txt"); ?></a></h1>
     		<?php else : ?>
-    			<a href="<?php echo get_option('home'); ?>/" title="Home" ><img src="<?php echo ($logo = get_option(THEME_PREFIX . 'logo_img')) ? $logo : get_bloginfo("template_url") . "/images/logo-clickceu.png"; ?>" alt="<?php bloginfo('name'); ?>" /></a>
+    			<a href="<?php echo get_option('home'); ?>/" title="Home" ><img src="<?php echo ($logo = get_option(THEME_PREFIX . 'logo_img')) ? $logo : get_bloginfo("template_url") . "/images/logo-clickplayceu.png"; ?>" alt="<?php bloginfo('name'); ?>" /></a>
     		<?php endif; ?>
 			</div> <!-- header-left -->
 			
