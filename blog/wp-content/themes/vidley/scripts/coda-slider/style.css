@@ -18,7 +18,7 @@ position: relative;
 }
 
 .coda-nav-left a {
-background: url(images/left.png) 0 0;
+background: url(http://clickplayceu.com/wp-content/themes/videos/scripts/coda-slider/images/left-alt.png) 0 0;
 position: absolute;
 width: 46px;
 height: 46px;
@@ -30,11 +30,11 @@ z-index: 500000;
 }
 
 .coda-nav-left a:hover {
-background: url(images/left.png) 0 -46px;
+background: url(http://clickplayceu.com/wp-content/themes/videos/scripts/coda-slider/images/left-alt.png) 0 -46px;
 }
 
 .coda-nav-right a {
-background: url(images/right.png) 0 0;
+background: url(http://clickplayceu.com/wp-content/themes/videos/scripts/coda-slider/images/right-alt.png) 0 0;
 position: absolute;
 width: 46px;
 height: 46px;
@@ -46,7 +46,7 @@ z-index: 500000;
 }
 
 .coda-nav-right a:hover {
-background: url(images/right.png) 0 -46px;
+background: url(http://clickplayceu.com/wp-content/themes/videos/scripts/coda-slider/images/right-alt.png) 0 -46px;
 }
 
 .coda-slider-wrapper {

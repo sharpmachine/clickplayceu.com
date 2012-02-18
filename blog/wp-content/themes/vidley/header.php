@@ -67,9 +67,9 @@ Be inspired, but please don't steal...
 		<div id="header-inside">
 			<div id="header-left">
     		<?php if ( get_option(THEME_PREFIX . "logo_txt") ) : ?>
-    			<h1><a href="<?php echo get_option('home'); ?>/" title="Home" ><?php echo get_option(THEME_PREFIX . "logo_txt"); ?></a></h1>
+    			<h1><a href="http://clickplayceu.com" title="Home" ><?php echo get_option(THEME_PREFIX . "logo_txt"); ?></a></h1>
     		<?php else : ?>
-    			<a href="<?php echo get_option('home'); ?>/" title="Home" ><img src="<?php echo ($logo = get_option(THEME_PREFIX . 'logo_img')) ? $logo : get_bloginfo("template_url") . "/images/logo.png"; ?>" alt="<?php bloginfo('name'); ?>" /></a>
+    			<a href="http://clickplayceu.com" title="Home" ><img src="<?php echo ($logo = get_option(THEME_PREFIX . 'logo_img')) ? $logo : get_bloginfo("template_url") . "/images/logo.png"; ?>" alt="<?php bloginfo('name'); ?>" /></a>
     		<?php endif; ?>
 			</div> <!-- header-left -->
 			
