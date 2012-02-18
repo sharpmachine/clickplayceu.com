@@ -1,5 +1,6 @@
 <?php
 
+$_SESSION['wpsc_checkout_error_messages'] = array();
 /**
  * WP eCommerce checkout class
  *
