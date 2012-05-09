@@ -1,110 +1,116 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://clickplayceu.com/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/3.3.2" -->
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://localhost.clickplayceu.com/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/3.3.2" -->
 <!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.2.7" -->
-<!-- generated-on="May 4, 2012 9:14 pm" -->
+<!-- generated-on="May 9, 2012 4:31 pm" -->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
-		<loc>http://clickplayceu.com/</loc>
-		<lastmod>2012-05-04T21:12:57+00:00</lastmod>
+		<loc>http://localhost.clickplayceu.com/</loc>
+		<lastmod>2012-05-09T16:31:09+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://clickplayceu.com/accreditation-statement/</loc>
+		<loc>http://localhost.clickplayceu.com/managestudents/</loc>
+		<lastmod>2012-05-09T16:31:09+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://localhost.clickplayceu.com/faq/</loc>
+		<lastmod>2012-05-07T21:51:55+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://localhost.clickplayceu.com/accreditation-statement/</loc>
 		<lastmod>2012-05-04T21:12:57+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://clickplayceu.com/faq/</loc>
-		<lastmod>2012-04-18T17:59:44+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.6</priority>
-	</url>
-	<url>
-		<loc>http://clickplayceu.com/2011/08/the-scourge-of-mrsa/</loc>
+		<loc>http://localhost.clickplayceu.com/2011/08/the-scourge-of-mrsa/</loc>
 		<lastmod>2012-04-10T23:32:45+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
 	<url>
-		<loc>http://clickplayceu.com/2011/08/respiratory-system-part-2-asthma-pneumonia-copd/</loc>
+		<loc>http://localhost.clickplayceu.com/2011/08/respiratory-system-part-2-asthma-pneumonia-copd/</loc>
 		<lastmod>2012-04-10T23:31:49+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
 	<url>
-		<loc>http://clickplayceu.com/2011/08/respiratory-system-part-1-the-foundation/</loc>
+		<loc>http://localhost.clickplayceu.com/2011/08/respiratory-system-part-1-the-foundation/</loc>
 		<lastmod>2012-04-10T23:31:18+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
 	<url>
-		<loc>http://clickplayceu.com/2012/04/itunes-clickplay-ceu/</loc>
+		<loc>http://localhost.clickplayceu.com/2012/04/itunes-clickplay-ceu/</loc>
 		<lastmod>2012-04-10T23:30:40+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
 	<url>
-		<loc>http://clickplayceu.com/2012/04/accreditation/</loc>
+		<loc>http://localhost.clickplayceu.com/2012/04/accreditation/</loc>
 		<lastmod>2012-04-10T23:30:20+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
 	<url>
-		<loc>http://clickplayceu.com/2012/03/what-we-do/</loc>
+		<loc>http://localhost.clickplayceu.com/2012/03/what-we-do/</loc>
 		<lastmod>2012-04-10T23:29:54+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
 	<url>
-		<loc>http://clickplayceu.com/2012/03/compassion-fatigue/</loc>
+		<loc>http://localhost.clickplayceu.com/2012/03/compassion-fatigue/</loc>
 		<lastmod>2012-04-10T23:28:43+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
 	<url>
-		<loc>http://clickplayceu.com/about/</loc>
+		<loc>http://localhost.clickplayceu.com/about/</loc>
 		<lastmod>2012-04-05T16:48:39+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://clickplayceu.com/pricing-plans/</loc>
+		<loc>http://localhost.clickplayceu.com/pricing-plans/</loc>
 		<lastmod>2012-04-04T17:12:25+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://clickplayceu.com/home/</loc>
+		<loc>http://localhost.clickplayceu.com/home/</loc>
 		<lastmod>2012-04-04T16:41:46+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://clickplayceu.com/contact-us/</loc>
+		<loc>http://localhost.clickplayceu.com/contact-us/</loc>
 		<lastmod>2012-04-03T22:43:19+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://clickplayceu.com/itunes-ceu/</loc>
+		<loc>http://localhost.clickplayceu.com/itunes-ceu/</loc>
 		<lastmod>2012-04-03T21:16:10+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://clickplayceu.com/state-requirements/</loc>
+		<loc>http://localhost.clickplayceu.com/state-requirements/</loc>
 		<lastmod>2012-02-12T03:48:48+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://clickplayceu.com/how-it-works/</loc>
+		<loc>http://localhost.clickplayceu.com/how-it-works/</loc>
 		<lastmod>2012-01-28T20:03:56+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://clickplayceu.com/blog/</loc>
+		<loc>http://localhost.clickplayceu.com/blog/</loc>
 		<lastmod>2012-01-20T23:48:33+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>

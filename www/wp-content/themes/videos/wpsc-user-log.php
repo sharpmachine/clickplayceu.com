@@ -17,6 +17,9 @@ global $files, $separator, $purchase_log, $col_count, $products, $links; ?>
 		<a href="<?php bloginfo('url'); ?>/#channels-inside">Get Started!</a> |
 		<a href="<?php echo get_option( 'user_account_url' ); ?>"><?php _e('Purchase History','wpsc'); ?></a> |
 		<a href="<?php bloginfo('url'); ?>/profile">Change Password/Email</a>
+		<?php if (wp_get_current_user()->roles[0] == 'corporate_subscriber'): ?>
+		| <a href="<?php bloginfo('url'); ?>/managestudents/">Manage Students</a>
+		<?php endif; ?>
 	</div>
 <?php endif ?>
 
