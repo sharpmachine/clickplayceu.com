@@ -1,4 +1,4 @@
-<?php if (is_user_logged_in()): ?>
+<?php if (is_user_logged_in() && wp_get_current_user()->roles[0] == 'corporate_subscriber'): ?>
 
 <p style="color:#FF0000;">
 <?php
