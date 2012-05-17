@@ -512,12 +512,19 @@ EOF;
 		$this->collate_data();
 		$this->collate_cart();
 
-		if(isset($this->conf['cimon']) && $this->conf['cimon'] == 'checked' && $this->payType == 'preset'
-		&& isset($_REQUEST['auth_net']['payment_preset'])){
-			$result = $this->processCIMTransaction();
-		}else{
-			$result = $this->processAIMTransaction();
+
+		$role = wp_get_current_user()->roles[0];
+		if ($role != 'corporate_subscriber' && $role != 'corporate_student') {
+			if(isset($this->conf['cimon']) && $this->conf['cimon'] == 'checked' && $this->payType == 'preset'
+			&& isset($_REQUEST['auth_net']['payment_preset'])){
+				$result = $this->processCIMTransaction();
+			}else{
+				$result = $this->processAIMTransaction();
+			}
+		} else {
+			$result = true;
 		}
+
 		do_action('submit_payment_response',$this);
 		$this->setOrderMeta();
 		if ($result == true) {

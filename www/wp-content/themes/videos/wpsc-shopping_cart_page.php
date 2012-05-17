@@ -391,8 +391,14 @@ endif;
       <?php endif; ?>
       <?php do_action('wpsc_inside_shopping_cart'); ?>
 
-	<h
+	<?php
+	$role = wp_get_current_user()->roles[0];
+	if ($role == 'corporate_subscriber' || $role == 'corporate_student')
+		$is_subscriber = true;
+	?>
 
+	<h2>Payment Details</h2>
+	<?php if ($is_subscriber): ?></table><table class="wpsc_checkout_table table-4" style="display: none;"><?php endif; ?>
       <?php  //this HTML displays activated payment gateways   ?>
       <?php if(wpsc_gateway_count() > 1): // if we have more than one gateway enabled, offer the user a choice ?>
          <tr>
@@ -435,6 +441,9 @@ endif;
          </td>
          </tr>
          <?php endif; ?>
+	<?php if ($is_subscriber): ?></table><table class="wpsc_checkout_table table-4">
+            <h3><?php _e('Payment Type', 'wpsc');?></h3>
+<p>You have a corporate subscription, there is no single charge.</p><p>&nbsp;</p><?php endif; ?>
 
       <?php if(wpsc_has_tnc()) : ?>
          <tr>
