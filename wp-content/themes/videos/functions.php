@@ -329,6 +329,7 @@ function help_dashboard_widget_function() {
 			<li><a href=http://www.youtube.com/watch?v=IE_10_nwe0c target=_blank>SEO Ultimate Tutorial</a></li>
 			<li><a href=http://youtu.be/BOnh7c6EshE target=_blank>Managing Videos</a></li>
 			<li><a href=http://youtu.be/__GWhzE9Kao target=_blank>Managing Tests</a></li>
+			<li><a href=http://youtu.be/7bfB3QQ9cY8 target=_blank>Managing State Requirements</a></li>
 		</ul>
 		
 		<p style=clear:both;padding-top:5px;margin-bottom:0.5em;color:#666;font-size:14px;>Helpful Quick Links:</p>
@@ -367,5 +368,20 @@ function remove_dashboard_widgets(){
 }
 
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets');
+
+function custom_login_logo() {
+  echo '<style type="text/css">
+    h1 a 
+    { 
+    	background-image:url('.get_bloginfo('template_directory').'/images/logo-clickplayceu.png) !important; 
+    	width: 503px !important;
+    	height: 98px !important;
+    	margin-left: -100px !important;
+	}
+
+    </style>';
+}
+
+add_action('login_head', 'custom_login_logo');
 
 ?>

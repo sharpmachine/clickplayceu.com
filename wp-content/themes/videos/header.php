@@ -218,3 +218,9 @@
 			</div> <!-- header-right -->
 		</div> <!-- header-inside -->
 	</div> <!-- header -->
+
+<?php
+function manage_students($arguments) {
+	include('manage-students.php');
+}
+add_shortcode('studentmanager', 'manage_students'); ?>

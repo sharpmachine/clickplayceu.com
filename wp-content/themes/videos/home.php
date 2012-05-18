@@ -62,17 +62,17 @@
 				<h2>CLiCKPLAYceu makes it as easy as 1-2-3 to receive your continuing education.</h2>
 				<div class="col">
 					<h3><span>1</span> Take the Pre-Test.</h3>
-					<p>The pre-test is designed to determine your pre-existing knowledge base. It also functions to give you an idea about where this course will be heading.</p>
+					<p>The pre-test functions to determine your pre-existing knowledge base and to give you a preview of what you can expect to learn from the course.</p>
 					<img src="<?php bloginfo('template_directory'); ?>/images/test.jpg" width="280" height="186" alt="Test">
 				</div>
 				<div class="col">
 					<h3><span>2</span> Watch the Video Training.</h3>
-					<p>Simply watch the training video for the certification you are seeking.  From there you are well on your way to an amazing education experience!</p>
+					<p>Simply click play, sit back, and enjoy the entertaining and informative educational training video.</p>
 					<img src="<?php bloginfo('template_directory'); ?>/images/watch-videos.jpg" width="280" height="186" alt="Watch Videos">
 				</div>
 				<div class="col last">
 					<h3><span>3</span> Pass the Final Test.</h3>
-					<p>Pass the final test with 70% or better. Once you’ve passed and completed the checkout process your certificate of completion will be sent to you instantly via e-mail.</p>
+					<p>Once you’ve passed the final test with 70% or better, complete the checkout process and receive your Certificate of Completion instantly via e-mail.</p>
 					<img src="<?php bloginfo('template_directory'); ?>/images/final-exam.jpg" width="280" height="186" alt="Test">
 				</div>
 				

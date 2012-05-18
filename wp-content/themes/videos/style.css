@@ -1,4 +1,37 @@
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+/*********************************************************************************************
+
+Theme Name: Videos
+Theme URI: http://www.cogentceus.com/
+Description: CogentCEUs Website
+Version: 1.2.4
+
+**********************************************************************************************
+
+
+*********************************************************************************************/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
   margin: 0;
   padding: 0;
 }
@@ -6,20 +39,54 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-fieldset, img { border: 0; }
-address, caption, cite, code, dfn, em, strong, th, var {
+fieldset,
+img {
+  border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
   font-style: normal;
   font-weight: normal;
 }
-ol, ul { list-style: none; }
-caption, th { text-align: left; }
-h1, h2, h3, h4, h5, h6 {
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 100%;
   font-weight: normal;
 }
-q:before { content: ''; }
-q:after { content: ''; }
-abbr, acronym { border: 0; }
+q:before,
+q:after {
+  content: '';
+}
+abbr,
+acronym {
+  border: 0;
+}
+/*.......................................................the colors*/
+/*.......................................................mixins*/
+/*********************************************************************************************
+
+1. Basic Setup  -----------------------  All Theme Files
+
+*********************************************************************************************/
 body {
   background: #e7e7e7;
   width: auto;
@@ -33,36 +100,68 @@ html > body {
   min-height: 800px;
   height: auto;
 }
-a:link { color: #329f48; }
-a:link:hover {
+a:link,
+a {
+  color: #329f48;
+}
+a:link :hover,
+a :hover {
   text-decoration: underline;
   color: #6bae65;
 }
-a:link:visited { color: #6bae65; }
-a { color: #329f48; }
-a:hover {
-  text-decoration: underline;
+a:link :visited,
+a :visited {
   color: #6bae65;
 }
-a:visited { color: #6bae65; }
-h1 { font-size: 24px; }
-h2 { font-size: 18px; }
-h3 { font-size: 14px; }
-h1, h2, h3, h4, h5, h6, strong {
+h1 {
+  font-size: 24px;
+}
+h2 {
+  font-size: 18px;
+}
+h3 {
+  font-size: 14px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
   font-weight: bold;
   margin-bottom: 20px;
 }
-#header h1 { margin: 50px 0 0 0; }
-abbr, acronym {
+#header h1 {
+  margin: 50px 0 0 0;
+}
+/*h2 {
+margin: 0 0 5px 0;
+}*/
+abbr,
+acronym {
   border-bottom: 1px dotted;
   cursor: help;
 }
-em { font-style: italic; }
-ol, ul { margin: 0; }
-ol li { list-style: decimal outside; }
-ul li { list-style: none; }
-td#details, td.details { border: 0; }
-th, td {
+em {
+  font-style: italic;
+}
+ol,
+ul {
+  margin: 0;
+}
+ol li {
+  list-style: decimal outside;
+}
+ul li {
+  list-style: none;
+}
+td#details,
+td.details {
+  border: 0;
+}
+th,
+td {
   border: 1px solid;
   padding: 8px;
 }
@@ -80,12 +179,29 @@ caption {
   margin-bottom: 8px;
   text-align: center;
 }
-p, fieldset, table { margin-bottom: 15px; }
-a:link { text-decoration: none; }
-a:visited { text-decoration: none; }
-:focus { outline: 0; }
-.alignleft { float: left; }
-.alignright { float: right; }
+p,
+fieldset,
+table {
+  margin-bottom: 15px;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}
+:focus {
+  outline: 0;
+}
+.alignleft {
+  float: left;
+}
+.alignright {
+  float: right;
+}
+/*********************************************************************************************
+
+2. Header Styles  ---------------------  header.php
+
+*********************************************************************************************/
 #header {
   width: 100%;
   float: left;
@@ -95,14 +211,27 @@ a:visited { text-decoration: none; }
   margin: 0px auto;
 }
 #header-left {
+  /* For the Logo */
+
   width: 503px;
   float: left;
   padding: 15px 0 30px 0;
 }
 #header-right {
+  /* For the Menu */
+
   width: 430px;
   float: right;
 }
+/*#header-right img { 
+float: right;
+margin: 38px 0 0 0;
+}*/
+/*********************************************************************************************
+
+3. Navigation and Menu Styles  --------  header.php
+
+*********************************************************************************************/
 #navigation {
   width: 100%;
   float: left;
@@ -111,18 +240,16 @@ a:visited { text-decoration: none; }
   width: 960px;
   margin: 0px auto;
 }
-.menu {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+.menu,
 .menu * {
+  /* SuperFish Menu Styles */
+
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .menu {
-  background: #fbfbfb;
+  background: #FBFBFB;
   font-weight: bold;
   float: right;
   font-size: 12px;
@@ -134,41 +261,47 @@ a:visited { text-decoration: none; }
   position: relative;
   color: #464648;
 }
-.menu a:hover { color: #999999; }
-.menu ul li { width: 100%; }
+.menu a:hover {
+  color: #999999;
+}
+.menu ul li {
+  width: 100%;
+}
 .menu ul {
   position: absolute;
   top: -15000px;
   width: 160px;
+  /* Left Offset of Sub-Menus Need to Match */
+
 }
-.menu li:hover ul {
-  left: -30px;
-  top: 22px;
-  z-index: 10000;
-}
+.menu li:hover ul,
 .menu li.sfHover ul {
   left: -30px;
   top: 22px;
+  /* Match Top UL List Item Height */
+
   z-index: 10000;
 }
-ul.menu li:hover li ul { top: -15000px; }
-ul.menu li.sfHover li ul { top: -15000px; }
-ul.menu li li:hover ul {
-  left: 160px;
-  top: 0;
+ul.menu li:hover li ul,
+ul.menu li.sfHover li ul {
+  top: -15000px;
 }
+ul.menu li li:hover ul,
 ul.menu li li.sfHover ul {
   left: 160px;
+  /* Match ul width. */
+
   top: 0;
 }
-ul.menu li li:hover li ul { top: -15000px; }
-ul.menu li li.sfHover li ul { top: -15000px; }
-ul.menu li li li:hover ul {
-  left: 160px;
-  top: 0;
+ul.menu li li:hover li ul,
+ul.menu li li.sfHover li ul {
+  top: -15000px;
 }
+ul.menu li li li:hover ul,
 ul.menu li li li.sfHover ul {
   left: 160px;
+  /* Match ul Width. */
+
   top: 0;
 }
 .menu li {
@@ -177,9 +310,13 @@ ul.menu li li li.sfHover ul {
   padding: 5px 0 5px 0;
   position: relative;
 }
-.menu li:hover { visibility: inherit; }
+.menu li:hover {
+  visibility: inherit;
+  /* Fixes IE7 Sticky Bug */
+
+}
 .menu li ul {
-  background: #fbfbfb;
+  background: #FBFBFB;
   font-size: 12px;
   margin: 0 0 0 10px;
   padding: 10px 10px 5px 0;
@@ -188,13 +325,15 @@ ul.menu li li li.sfHover ul {
   background: none;
   padding: 0 0 5px 0;
 }
-.menu li li:hover { background: none; }
+.menu li li:hover {
+  background: none;
+}
 .menu li li ul {
-  background: #ffffff;
+  background: #FFFFFF;
   margin: -20px 0 0 -50px;
 }
 .menu li li li ul {
-  background: #dfddd8;
+  background: #DFDDD8;
   margin: -20px 0 0 -100px;
 }
 li.twitter {
@@ -205,12 +344,17 @@ li.subscribe {
   background: url(images/rss.png) right no-repeat;
   padding-right: 20px;
 }
+/*********************************************************************************************
+
+4. Search Form  -----------------------  searchform.php
+
+*********************************************************************************************/
 #search {
   float: right;
   margin: 0;
 }
 input#s {
-  background: #ffffff;
+  background: #FFFFFF;
   border: none;
   float: left;
   font-size: 14px;
@@ -221,7 +365,7 @@ input#s {
 }
 input#search-submit {
   background: #329f48;
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: bold;
   font-size: 12px;
   float: left;
@@ -229,7 +373,14 @@ input#search-submit {
   width: 78px;
   height: 32px;
 }
-input#search-submit:hover { background: #6bae65; }
+input#search-submit:hover {
+  background: #6bae65;
+}
+/*********************************************************************************************
+
+5. Main Content Styles  ---------------  index.php, single.php, page.php
+
+*********************************************************************************************/
 #content {
   width: 100%;
   float: left;
@@ -239,30 +390,35 @@ input#search-submit:hover { background: #6bae65; }
   margin: 0px auto;
 }
 .divider-margin {
-  border-top: 1px solid #dfddd8;
+  border-top: 1px solid #DFDDD8;
   width: 960px;
   height: 2px;
   float: left;
   margin: 30px 0 30px 0;
 }
 .divider-top {
-  border-top: 1px solid #dfddd8;
+  border-top: 1px solid #DFDDD8;
   width: 960px;
   height: 2px;
   float: left;
   margin: 30px 0 0 0;
 }
 .divider {
-  border-top: 1px solid #dfddd8;
+  border-top: 1px solid #DFDDD8;
   width: 960px;
   height: 1px;
   float: left;
   margin: 0;
 }
+/*********************************************************************************************
+
+6. Home Page Styles  ------------------  home.php
+
+*********************************************************************************************/
 #channels-title {
   width: 960px;
   float: left;
-  color: #ffffff;
+  color: #FFFFFF;
   margin: 30px 0 0 0;
   padding: 12px 0 10px 0;
 }
@@ -285,6 +441,8 @@ input#search-submit:hover { background: #6bae65; }
   background: #fbfbfb;
   width: 960px;
   float: left;
+  /*margin: 30px 0 0 0;*/
+
   margin: 0;
   padding: 0 0 32px 0;
 }
@@ -292,6 +450,23 @@ body.home #channels-wrapper h2 {
   padding: 20px 0 0 30px;
   margin-bottom: 0;
 }
+/*#channels h3 {
+color: #FFFFFF;
+width: 960px;
+height: 40px;
+float: left;
+font-size: 18px;
+font-weight: normal;
+margin: 30px 0 -10px 0;
+padding: 12px 0 0 0;
+text-align: center;
+}*/
+/*#channels h4 {
+color: #FFFFFF;.post-meta 
+position: absolute;
+margin: 120px 0 0 12px;
+font-size: 14px;
+}*/
 .post-image-home {
   width: 200px;
   height: 295px;
@@ -310,7 +485,9 @@ body.home #channels-wrapper h2 {
   margin-bottom: 15px;
   min-height: 40px;
 }
-.post-image-home li.excerpt { height: 50px; }
+.post-image-home li.excerpt {
+  height: 50px;
+}
 .post-image-home li.price {
   text-align: right;
   font-weight: bold;
@@ -322,19 +499,26 @@ body.home #channels-wrapper h2 {
   font-size: small;
   top: -0.3em;
 }
-.post-image-home li.credits { text-align: right; }
-.post-frame-channel:hover { background: url(images/post-frame.png) 0 -150px; }
+.post-image-home li.credits {
+  text-align: right;
+}
+.post-frame-channel:hover {
+  background: url(images/post-frame.png) 0 -150px;
+}
+/*.......................................................columns*/
 .column {
   width: 260px;
   height: 271px;
   margin-right: 29px;
   float: left;
   text-align: justify;
-  border-right: 1px solid #dddddd;
+  border-right: 1px solid #ddd;
   padding-right: 30px;
 }
-.column h3 { text-align: center; }
-.column h4 { text-align: center; }
+.column h3,
+.column h4 {
+  text-align: center;
+}
 .column h4 {
   margin-top: 23px;
   border: 2px solid #329f48;
@@ -352,15 +536,28 @@ body.home #channels-wrapper h2 {
   float: none;
   text-align: center;
 }
-.column p { min-height: 180px; }
-.light-green { background-color: #6bae65; }
-.dark-green { background-color: #329f48; }
+.column p {
+  min-height: 180px;
+}
+.light-green {
+  background-color: #6bae65;
+}
+.dark-green {
+  background-color: #329f48;
+}
 .last {
   margin-right: 0;
   padding-right: 0;
   border-right: none;
 }
-body.logged-in .column a.continue-reading { display: none; }
+body.logged-in .column a.continue-reading {
+  display: none;
+}
+/*********************************************************************************************
+
+7. Video Container  -------------------  home.php, single.php
+
+*********************************************************************************************/
 #video-container {
   width: 100%;
   float: left;
@@ -381,7 +578,13 @@ body.logged-in .column a.continue-reading { display: none; }
   height: 10px;
   float: left;
 }
-#video, #video-single {
+#video {
+  background: #fbfbfb;
+  width: 960px;
+  float: left;
+  padding: 10px 0 10px 0;
+}
+#video-single {
   background: #fbfbfb;
   width: 960px;
   float: left;
@@ -400,8 +603,12 @@ body.logged-in .column a.continue-reading { display: none; }
   font-weight: bold;
   margin-bottom: 15px;
 }
-.video-desc a { text-decoration: underline; }
-.video-desc h2 a { text-decoration: none; }
+.video-desc a {
+  text-decoration: underline;
+}
+.video-desc h2 a {
+  text-decoration: none;
+}
 body.home .video-desc ul {
   list-style: disc;
   margin-left: 15px;
@@ -413,7 +620,7 @@ body.home .video-desc ul li {
 }
 a.continue-reading {
   background: #329f48;
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: bold;
   float: left;
   padding: 8px 15px 8px 15px;
@@ -421,10 +628,14 @@ a.continue-reading {
 }
 a.continue-reading:hover {
   background: #6bae65;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
-#video h2 { padding: 0; }
+#video h2 {
+  /*margin: 0 0 5px 0;*/
+
+  padding: 0;
+}
 #video-bottom {
   background: #fbfbfb;
   width: 960px;
@@ -444,7 +655,9 @@ a.continue-reading:hover {
   left: -35px;
   z-index: 500000;
 }
-.previous-post a:hover { background: url(images/left-alt.png) 0 -46px; }
+.previous-post a:hover {
+  background: url(images/left-alt.png) 0 -46px;
+}
 .next-post a {
   background: url(images/right-alt.png) 0 0;
   position: absolute;
@@ -454,25 +667,58 @@ a.continue-reading:hover {
   right: -35px;
   z-index: 500000;
 }
-.next-post a:hover { background: url(images/right-alt.png) 0 -46px; }
+.next-post a:hover {
+  background: url(images/right-alt.png) 0 -46px;
+}
 #tooltip {
   display: none;
   position: absolute;
   z-index: 1000;
-  background-color: #ffffdd;
-  color: #444444;
+  background-color: #ffd;
+  color: #444;
   padding: 4px;
   width: 200px;
-  box-shadow: #333333 1px 1px 3px;
+  box-shadow: #333 1px 1px 3px;
 }
 .post-meta {
+  /*background: none repeat scroll 0 0 #FBFBFB;*/
+
   float: left;
   margin: 0 0 30px 0;
 }
-#pretest, #test {
-  background: none repeat scroll 0 0 #fbfbfb;
+/*
+#post-meta-top {
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-topright: 6px;
+}
+
+#post-meta-top {
+    background: none repeat scroll 0 0 #FBFBFB;
+    float: left;
+    height: 10px;
+    width: 280px;
+}
+#post-meta-bottom {
+    -moz-border-radius-bottomleft: 6px;
+    -moz-border-radius-bottomright: 6px;
+}
+
+#post-meta-bottom {
+    background: none repeat scroll 0 0 #FBFBFB;
+    float: left;
+    height: 10px;
+    width: 280px;
+}*/
+#pretest,
+#test {
+  background: none repeat scroll 0 0 #FBFBFB;
   margin-bottom: 20px;
 }
+/*********************************************************************************************
+
+8. Multiple Post Pages  ---------------  index.php
+
+*********************************************************************************************/
 #breadcrumbs {
   background: #fbfbfb;
   color: #464648;
@@ -489,13 +735,15 @@ a.continue-reading:hover {
   padding: 5px 0 0 0;
 }
 .multiple {
-  border-bottom: 1px solid #dfddd8;
+  border-bottom: 1px solid #DFDDD8;
   width: 960px;
   float: left;
   margin: 0 0 30px 0;
   padding: 0 0 15px 0;
 }
 .post-meta {
+  /*background: #FBFBFB;*/
+
   width: 300px;
   float: left;
   margin: 0;
@@ -506,22 +754,30 @@ a.continue-reading:hover {
   float: left;
 }
 .details {
-  border-top: 1px solid #dfddd8;
+  border-top: 1px solid #DFDDD8;
   width: 600px;
   float: left;
   margin: 15px 0 0 0;
   padding: 0;
 }
-.details-single { margin: 0; }
+.details-single {
+  margin: 0;
+}
 .details li {
-  border-bottom: 1px solid #dfddd8;
+  border-bottom: 1px solid #DFDDD8;
   width: 600px;
   float: left;
   padding: 10px 0 10px 0;
 }
-table.logdisplay table.logdisplay { width: 100%; }
-table.logdisplay td { border: none; }
-table.customer_details td { border: 1px solid #dfddd8; }
+table.logdisplay table.logdisplay {
+  width: 100%;
+}
+table.logdisplay td {
+  border: none;
+}
+table.customer_details td {
+  border: 1px solid #DFDDD8;
+}
 .date {
   background: url(images/date.png) left no-repeat;
   padding: 0 0 0 40px;
@@ -539,7 +795,7 @@ table.customer_details td { border: 1px solid #dfddd8; }
   padding: 0 0 0 40px;
 }
 .post-image {
-  background: #dfddd8;
+  background: #DFDDD8;
   width: 250px;
   float: left;
   padding: 20px 0 20px 50px;
@@ -550,16 +806,20 @@ table.customer_details td { border: 1px solid #dfddd8; }
   height: 150px;
   position: absolute;
 }
-.post-frame-video:hover { background: url(images/post-frame.png) 0 -150px; }
+.post-frame-video:hover {
+  background: url(images/post-frame.png) 0 -150px;
+}
 .post-frame-post {
   background: url(images/post-frame.png) 0 0;
   width: 200px;
   height: 150px;
   position: absolute;
 }
-.post-frame-post:hover { background: url(images/post-frame.png) 0 -150px; }
+.post-frame-post:hover {
+  background: url(images/post-frame.png) 0 -150px;
+}
 #pagination {
-  background: #dfddd8;
+  background: #DFDDD8;
   width: 936px;
   float: left;
   margin: -36px 0 30px 0;
@@ -578,8 +838,9 @@ table.customer_details td { border: 1px solid #dfddd8; }
   float: right;
   text-align: right;
 }
+/*.......................................................easy steps*/
 #easy-steps {
-  background-color: #ffffff;
+  background-color: #fff;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -595,7 +856,7 @@ table.customer_details td { border: 1px solid #dfddd8; }
   margin-right: 30px;
 }
 #easy-steps .col span {
-  color: #30b671;
+  color: #30B671;
   font-size: 28px;
   font-style: italic;
   padding-right: 10px;
@@ -606,11 +867,19 @@ table.customer_details td { border: 1px solid #dfddd8; }
   color: #293935;
   font-size: 16px;
 }
+#easy-steps .col p {
+  height: 100px;
+}
 #easy-steps .col img {
   display: block;
   margin-bottom: 15px;
-  border: 3px solid #a6a29a;
+  border: 3px solid #A6A29A;
 }
+/*********************************************************************************************
+
+9. Single Post Pages  -----------------  single.php, page.php
+
+*********************************************************************************************/
 .single-postorpage {
   width: 960px;
   float: left;
@@ -625,29 +894,33 @@ table.customer_details td { border: 1px solid #dfddd8; }
   width: 630px;
   float: left;
 }
-.entry-single a { text-decoration: underline; }
-.entry-multiple a { text-decoration: underline; }
-.entry-single h2 a { text-decoration: none; }
-.entry-multiple h2 a { text-decoration: none; }
-.entry ul { margin: 0 0 15px 0; }
-.entry-single ul { margin: 0 0 15px 0; }
-.entry-multiple ul { margin: 0 0 15px 0; }
-.entry ul li {
-  background: url(images/bullet.png) top left no-repeat;
-  padding: 0 0 0 20px;
+.entry-single a,
+.entry-multiple a {
+  text-decoration: underline;
 }
-.entry-single ul li {
-  background: url(images/bullet.png) top left no-repeat;
-  padding: 0 0 0 20px;
+.entry-single h2 a,
+.entry-multiple h2 a {
+  text-decoration: none;
 }
+.entry ul,
+.entry-single ul,
+.entry-multiple ul {
+  margin: 0 0 15px 0;
+}
+.entry ul li,
+.entry-single ul li,
 .entry-multiple ul li {
   background: url(images/bullet.png) top left no-repeat;
   padding: 0 0 0 20px;
 }
-.entry ol { margin: 0 0 15px 20px; }
-.entry-single ol { margin: 0 0 15px 20px; }
-.entry-multiple ol { margin: 0 0 15px 20px; }
-p img { max-width: 100%; }
+.entry ol,
+.entry-single ol,
+.entry-multiple ol {
+  margin: 0 0 15px 20px;
+}
+p img {
+  max-width: 100%;
+}
 img.centered {
   display: block;
   margin-left: auto;
@@ -662,7 +935,7 @@ img.alignleft {
   margin: 0 15px 2px 0;
 }
 .wp-caption {
-  background: #dfddd8;
+  background: #DFDDD8;
   text-align: center;
   padding: 15px 10px 10px 10px;
   margin: 0 0 20px 20px;
@@ -675,25 +948,25 @@ img.alignleft {
   margin: 10px 0 0;
   padding: 0;
 }
-.wp-caption .wp-caption-text {
-  font-size: 12px !important;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
+.wp-caption .wp-caption-text,
 .wp-caption .wp-caption-dd {
   font-size: 12px !important;
   text-align: center;
   margin: 0;
   padding: 0;
 }
+/*********************************************************************************************
+
+10. Post Comment Styles  ---------------  comments.php
+
+*********************************************************************************************/
 #comments {
   width: 960px;
   float: left;
   margin: 0 0 30px 0;
 }
 #comments-meta {
-  background: #dfddd8;
+  background: #DFDDD8;
   color: #464648;
   width: 936px;
   float: left;
@@ -706,8 +979,9 @@ img.alignleft {
   margin: 0;
   padding: 5px 0 5px 0;
 }
+/* Begin Comment Styles */
 .avatar {
-  background: #dfddd8;
+  background: #DFDDD8;
   margin: 0 20px -35px 10px;
   padding: 12px;
 }
@@ -716,23 +990,27 @@ img.alignleft {
   position: absolute;
   margin: 0 0 0 -10px;
 }
-.fn { margin: 0 0 0 -5px; }
+.fn {
+  margin: 0 0 0 -5px;
+}
 .comment-meta {
   width: 300px;
   position: absolute;
   margin: 0 0 0 90px;
   padding: 0;
 }
-#comments ol li { list-style: none; }
+#comments ol li {
+  list-style: none;
+}
 ol.commentlist li {
-  border-bottom: 1px solid #dfddd8;
+  border-bottom: 1px solid #DFDDD8;
   width: 960px;
   float: left;
   padding: 30px 0 20px 0;
   min-height: 80px;
 }
 ol.commentlist li.alt {
-  border-bottom: 1px solid #dfddd8;
+  border-bottom: 1px solid #DFDDD8;
   width: 960px;
   float: left;
   padding: 30px 0 20px 0;
@@ -755,10 +1033,18 @@ ol.commentlist li ul.children li.alt {
   border-bottom: none;
   padding: 25px 0 0 0;
 }
-ol.commentlist li ul.children li.depth-2 { margin: 0; }
-ol.commentlist li ul.children li.depth-3 { margin: 0; }
-ol.commentlist li ul.children li.depth-4 { margin: 0; }
-ol.commentlist li ul.children li.depth-5 { margin: 0; }
+ol.commentlist li ul.children li.depth-2 {
+  margin: 0;
+}
+ol.commentlist li ul.children li.depth-3 {
+  margin: 0;
+}
+ol.commentlist li ul.children li.depth-4 {
+  margin: 0;
+}
+ol.commentlist li ul.children li.depth-5 {
+  margin: 0;
+}
 ol.commentlist li div.reply {
   background: #329f48;
   font-size: 10px;
@@ -767,9 +1053,12 @@ ol.commentlist li div.reply {
   margin: 48px 0 0 90px;
   padding: 0 6px 0 6px;
 }
-ol.commentlist li div.reply a { color: #ffffff; }
+ol.commentlist li div.reply a {
+  color: #FFFFFF;
+}
+/* Begin Form Styles */
 #leave-reply {
-  background: #dfddd8;
+  background: #DFDDD8;
   color: #464648;
   width: 936px;
   float: left;
@@ -782,7 +1071,9 @@ ol.commentlist li div.reply a { color: #ffffff; }
   margin: 0;
   padding: 5px 0 5px 0;
 }
-#respond { width: 100%; }
+#respond {
+  width: 100%;
+}
 .comment-details {
   width: 330px;
   float: left;
@@ -791,7 +1082,7 @@ ol.commentlist li div.reply a { color: #ffffff; }
   background: #329f48;
   font-size: 12px;
   font-weight: bold;
-  color: #ffffff;
+  color: #FFFFFF;
   width: 78px;
   height: 26px;
   float: right;
@@ -799,9 +1090,13 @@ ol.commentlist li div.reply a { color: #ffffff; }
   padding: 6px 0 0 0;
   text-align: center;
 }
-.cancel-comment-reply a:hover { background: #70b23e; }
-#author, #email, #url {
-  background: #ffffff;
+.cancel-comment-reply a:hover {
+  background: #70B23E;
+}
+#author,
+#email,
+#url {
+  background: #FFFFFF;
   border: none;
   font-size: 14px;
   width: 274px;
@@ -809,7 +1104,7 @@ ol.commentlist li div.reply a { color: #ffffff; }
   padding: 2px 0 0 15px;
 }
 #comment {
-  background: #ffffff;
+  background: #FFFFFF;
   border: none;
   font-size: 14px;
   width: 600px;
@@ -818,7 +1113,7 @@ ol.commentlist li div.reply a { color: #ffffff; }
 }
 input#submit {
   background: #329f48;
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: bold;
   font-size: 12px;
   border: none;
@@ -827,7 +1122,10 @@ input#submit {
   height: 32px;
   margin: 0 529px 0 0;
 }
-input#submit:hover { background: #70b23e; }
+input#submit:hover {
+  background: #70B23E;
+}
+/*.......................................................Cart Menu*/
 #cart-menu {
   width: 287px;
   height: 40px;
@@ -843,7 +1141,9 @@ input#submit:hover { background: #70b23e; }
   float: left;
   padding: 10px;
 }
-#cart-menu ul li a { font-weight: bold; }
+#cart-menu ul li a {
+  font-weight: bold;
+}
 #cart-menu ul li a img {
   display: block;
   width: 16px;
@@ -851,19 +1151,37 @@ input#submit:hover { background: #70b23e; }
   float: left;
   margin-right: 5px;
 }
-#sidebar-home, #sidebar-single, #sidebar-page {
+/*********************************************************************************************
+
+11. Sidebar and Widgets  ---------------  sidebar.php, cat-posts.php, related-posts.php
+
+*********************************************************************************************/
+#sidebar-home,
+#sidebar-single,
+#sidebar-page {
   width: 960px;
+  /*float: left;
+margin: 30px 0 0 0;*/
+
   margin: 30px auto;
 }
 #sidebar-multiple {
   width: 100%;
   float: left;
 }
-#sidebar-home-inside, #sidebar-multiple-inside, #sidebar-single-inside, #sidebar-page-inside {
+#sidebar-home-inside,
+#sidebar-multiple-inside,
+#sidebar-single-inside,
+#sidebar-page-inside {
   width: 960px;
   margin: 0px auto;
 }
-#sidebar-left, #sidebar-center {
+#sidebar-left {
+  width: 300px;
+  float: left;
+  margin: 10px 30px 0 0;
+}
+#sidebar-center {
   width: 300px;
   float: left;
   margin: 10px 30px 0 0;
@@ -878,7 +1196,7 @@ input#submit:hover { background: #70b23e; }
   font-weight: bold;
 }
 .widget {
-  background: #dfddd8;
+  background: #DFDDD8;
   width: 270px;
   float: left;
   margin: 0 0 30px 0;
@@ -892,36 +1210,66 @@ input#submit:hover { background: #70b23e; }
   font-size: 14px;
   margin: 0 0 5px 0;
 }
-.sidebar-ad { margin: 5px; }
-.hexam-score { font-size: 140%; }
-.hexam-result { padding: 4px; }
-.hexam-success { background-color: #bbf5bb; }
-.hexam-failure { background-color: #f5bbbb; }
-.hexam-result a { text-decoration: underline; }
+.sidebar-ad {
+  margin: 5px;
+}
+.hexam-score {
+  font-size: 140%;
+}
+.hexam-result {
+  padding: 4px;
+}
+.hexam-success {
+  background-color: #BBF5BB;
+}
+.hexam-failure {
+  background-color: #F5BBBB;
+}
+.hexam-result a {
+  text-decoration: underline;
+}
+/*********************************************************************************************
+
+12. Footer Styles  ---------------------  footer.php
+
+*********************************************************************************************/
 #footer {
   width: 100%;
   float: left;
 }
 #footer-inside {
-  border-top: 1px solid #dfddd8;
+  border-top: 1px solid #DFDDD8;
   width: 960px;
   margin: 0px auto;
   padding: 20px 0 50px 0;
 }
-#footer h3 { color: #464648; }
-#footer a { color: #329f48; }
-#footer a:hover { text-decoration: underline; }
-.last { margin-right: 0 !important; }
-ul#clnav { display: none; }
-form.loginform p label { float: none !important; }
+#footer h3 {
+  color: #464648;
+}
+#footer a {
+  color: #329f48;
+}
+#footer a :hover {
+  text-decoration: underline;
+}
+.last {
+  margin-right: 0 !important;
+}
+/*.......................................................Registration Form*/
+ul#clnav {
+  display: none;
+}
+form.loginform p label {
+  float: none !important;
+}
 form.loginform p input.input {
   float: none !important;
   height: 20px;
   margin-bottom: 10px;
-  background-color: #faffbd;
+  background-color: #FAFFBD;
 }
 form.loginform p input#wp-submit {
-  background: #329f48;
+  background: #329F48;
   color: white;
   font-weight: bold;
   font-size: 12px;
@@ -935,7 +1283,7 @@ form.loginform p input#wp-submit {
   border-radius: 6px;
 }
 input[type="submit"] {
-  background: #329f48;
+  background: #329F48;
   color: white;
   font-weight: bold;
   font-size: 12px;
@@ -947,19 +1295,52 @@ input[type="submit"] {
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
-form#lostpasswordform p input#wp-submit { width: 132px; }
-input[type="text"], input[type="password"] { height: 20px; }
-form.wpsc_checkout_forms label { padding-bottom: 20px; }
-form.wpsc_checkout_forms input { margin-bottom: 15px; }
-form.wpsc_checkout_forms tr { padding-bottom: 10px; }
-#wpsc_checkout_form_47, #wpsc_checkout_form_9 {
+form#lostpasswordform p input#wp-submit {
+  width: 132px;
+}
+input[type="text"],
+input[type="password"] {
+  height: 20px;
+}
+/*.......................................................checkout*/
+form.wpsc_checkout_forms label {
+  padding-bottom: 20px;
+}
+form.wpsc_checkout_forms input {
+  margin-bottom: 15px;
+}
+form.wpsc_checkout_forms tr {
+  padding-bottom: 10px;
+}
+/*label.wpsc_email_address
+{
+	display: none;
+}
+
+#wpsc_checkout_form_47
+{
+	position: relative;
+	top: 196px;
+	left: 82px;
+	width: 255px;
+}*/
+#wpsc_checkout_form_47,
+#wpsc_checkout_form_9 {
   width: 255px;
   margin-left: 39px !important;
 }
-label.wpsc_email_address { display: block; }
-#checkout_page_container table.checkout_cart input { margin: 15px 0 !important; }
-#checkout_page_container table.checkout_cart tr.wpsc_coupon_row td { padding: 0 5px !important; }
-#checkout_page_container table.checkout_cart tr.product_row { padding: 0 !important; }
+label.wpsc_email_address {
+  display: block;
+}
+#checkout_page_container table.checkout_cart input {
+  margin: 15px 0 !important;
+}
+#checkout_page_container table.checkout_cart tr.wpsc_coupon_row td {
+  padding: 0  5px !important;
+}
+#checkout_page_container table.checkout_cart tr.product_row {
+  padding: 0 !important;
+}
 .post-meta input[type="submit"] {
   font-size: 14px !important;
   font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
@@ -977,27 +1358,31 @@ label.wpsc_email_address { display: block; }
   width: 300px;
   height: 36px;
 }
-.post-meta input[type="text"] {
-  display: block;
-  width: 155px;
-}
+.post-meta input[type="text"],
 .post-meta input[type="password"] {
   display: block;
   width: 155px;
 }
-.post-meta span { font-weight: bold; }
-.post-meta .wpsc_registration_form { margin-top: 0; }
-form#loginform input[type="text"] { width: 155px; }
-form#loginform input[type="password"] { width: 155px; }
+.post-meta span {
+  font-weight: bold;
+}
+.post-meta .wpsc_registration_form {
+  margin-top: 0;
+}
+form#loginform input[type="text"],
+form#loginform input[type="password"] {
+  width: 155px;
+}
 .tooltipsy {
   border: solid 1px #444444;
-  background: #ffffff;
+  background: #FFFFFF;
   padding: 10px;
   max-width: 200px;
 }
+/*.......................................................Update Password or Email*/
 form.user-forms p.form-email #email {
-  background: #ffffff;
-  border: 1px solid #abadb3;
+  background: #fff;
+  border: 1px solid #ABADB3;
   font-size: 12px;
   height: 22px;
   -moz-border-radius: 0;
@@ -1007,25 +1392,32 @@ form.user-forms p.form-email #email {
   padding: 0 2px;
   width: 198px;
 }
-#wppb_modify input[type="text"] { width: 200px !important; }
-#wppb_modify input[type="password"] { width: 200px !important; }
-#wppb_modify select { width: 200px !important; }
-#wppb_modify textarea { width: 200px !important; }
-#wppb_register input[type="text"] { width: 200px !important; }
-#wppb_register input[type="password"] { width: 200px !important; }
-#wppb_register select { width: 200px !important; }
-#wppb_register textarea { width: 200px !important; }
-#wppb_login input[type="text"] { width: 200px !important; }
-#wppb_login input[type="password"] { width: 200px !important; }
-#wppb_login select { width: 200px !important; }
-#wppb_login textarea { width: 200px !important; }
-#wppb_recover_password input[type="text"] { width: 200px !important; }
+#wppb_modify input[type="text"],
+#wppb_modify input[type="password"],
+#wppb_modify select,
+#wppb_modify textarea,
+#wppb_register input[type="text"],
+#wppb_register input[type="password"],
+#wppb_register select,
+#wppb_register textarea,
+#wppb_login input[type="text"],
+#wppb_login input[type="password"],
+#wppb_login select,
+#wppb_login textarea,
+#wppb_recover_password input[type="text"] {
+  width: 200px !important;
+}
+/*.......................................................the state requirements*/
 ul.profession-list {
   width: 400px;
   float: left;
 }
-body.single-state_requirements h3 { padding-top: 30px; }
-.state-list { margin: 0 30px; }
+body.single-state_requirements h3 {
+  padding-top: 30px;
+}
+.state-list {
+  margin: 0 30px;
+}
 .req-col {
   width: 22%;
   margin-left: 3%;
@@ -1041,4 +1433,6 @@ p.legal {
   float: left;
   margin-right: 4px;
 }
-.footer-menu { float: left; }
+.footer-menu {
+  float: left;
+}

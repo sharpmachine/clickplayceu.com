@@ -17,7 +17,7 @@
 	
 	#logo
 	{
-		width: 408px;
+		width: 503px;
 		margin: 50px auto;
 	}
 	
@@ -32,7 +32,7 @@
 <body>
 	
 	<div id="logo">
-		<img src="http://www.clickceu.com/wp-content/themes/videos/images/logo-clickceu.png" width="408" height="101" alt="Logo">
+		<img src="http://www.clickplayceu.com/wp-content/themes/videos/images/logo-clickplayceu.png" width="503" height="98" alt="Logo">
 		<p>We are currently undergoing routine maintenance.  Please check back soon.</p>
 	</div>
 	

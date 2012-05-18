@@ -1163,7 +1163,6 @@ function wpsc_place_shopping_cart( $content = '' ) {
 }
 
 function wpsc_transaction_results( $content = '' ) {
-
 	if ( preg_match( "/\[transactionresults\]/", $content ) ) {
 		define( 'DONOTCACHEPAGE', true );
 		ob_start();

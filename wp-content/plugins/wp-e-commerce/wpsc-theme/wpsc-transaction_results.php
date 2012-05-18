@@ -11,18 +11,21 @@
 	global $purchase_log, $errorcode, $sessionid, $echo_to_screen, $cart, $message_html;
 ?>
 <div class="wrap">
+aoseuhaoeuhracouhaoeuhaoehulaourcaoaoreuiasocuadeshcaroecuarcoeua
 
 <?php
 	echo wpsc_transaction_theme();
+	echo 'kxsqjuktqjbs;euidk;ceui;seukdhcg;dexrskqjk;coeud;aose';
 	if ( ( true === $echo_to_screen ) && ( $cart != null ) && ( $errorcode == 0 ) && ( $sessionid != null ) ) {			
-		
+		echo 'TNEUOEUTOEUREHRCOEUHRCOEHRUHOEUREOHCUOEH';
 		// Code to check whether transaction is processed, true if accepted false if pending or incomplete
 		
 		
 		echo "<br />" . wpautop(str_replace("$",'\$',$message_html));						
 	}elseif ( true === $echo_to_screen && ( !isset($purchase_log) ) ) {
+			echo 'saoeuehroeuhsriuhoheucarouoeua;oehua';
 			_e('Oops, there is nothing in your cart.', 'wpsc') . "<a href=".get_option("product_list_url").">" . __('Please visit our shop', 'wpsc') . "</a>";
 	}
 ?>	
-	
+	sjuixjznkxhqrcjxuhgrqhjiuxcjhpripuihequihcrouochuehcr
 </div>

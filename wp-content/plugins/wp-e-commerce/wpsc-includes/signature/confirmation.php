@@ -70,6 +70,7 @@ if (strlen($signData) > 0)
 		//header('Location: ?affidavit=true&filename='.$finalimg.'');
 		//echo '<img src="'. $finalimg . '" />';
 	} else {
+		// if this condition is thrown, you probably need to correct the domain name in license.php
 		//echo "<h3>Error generating signature. Check license.</h3>";
 	}
 } else {
