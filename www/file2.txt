@@ -1,6 +1,0 @@
-Array
-(
-    [response_code] => 4
-    [transaction_id] => 0
-    [response_description] => 
-)
