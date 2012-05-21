@@ -70,8 +70,10 @@ endif;
    <?php //this HTML displays coupons if there are any active coupons to use ?>
 
    <?php
+// CHECK IF IS SUBSCRIBER
+$is_prepaid = wp_get_current_user()->roles[0] == 'corporate_subscriber' || wp_get_current_user()->roles[0] == 'corporate_student';
 
-   if(wpsc_uses_coupons()): ?>
+   if(wpsc_uses_coupons() && !$is_prepaid): ?>
 
       <?php if(wpsc_coupons_error()): ?>
          <tr class="wpsc_coupon_row wpsc_coupon_error_row"><td><?php _e('Coupon is not valid.', 'wpsc'); ?></td></tr>
@@ -85,11 +87,17 @@ endif;
             </form>
          </td>
       </tr>
+<?php endif; ?>
       <tr class="wpsc_total_before_shipping">
 	      <td colspan="3"><?php _e('Total:','wpsc'); ?></td>
-	      <td colspan="3" class="wpsc_total_amount_before_shipping"><?php echo wpsc_cart_total(); ?></td>
+	      <td colspan="3" class="wpsc_total_amount_before_shipping">
+<?php if ($is_prepaid): ?>
+<span class="pricedisplay">(Prepaid subscriber) $0.00</span>
+<?php else: ?>
+<?php echo wpsc_cart_total(); ?>
+<?php endif; ?>
+</td>
       </tr>
-   <?php endif; ?>
    </table>
    <!-- cart contents table close -->
   <?php if(wpsc_uses_shipping()): ?>
@@ -391,18 +399,12 @@ endif;
       <?php endif; ?>
       <?php do_action('wpsc_inside_shopping_cart'); ?>
 
-	<?php
-	$role = wp_get_current_user()->roles[0];
-	if ($role == 'corporate_subscriber' || $role == 'corporate_student')
-		$is_subscriber = true;
-	?>
-
-	<h2>Payment Details</h2>
-	<?php if ($is_subscriber): ?></table><table class="wpsc_checkout_table table-4" style="display: none;"><?php endif; ?>
+	<?php if ($is_prepaid): ?></table><table class="wpsc_checkout_table table-4" style="display: none;"><?php endif; ?>
       <?php  //this HTML displays activated payment gateways   ?>
       <?php if(wpsc_gateway_count() > 1): // if we have more than one gateway enabled, offer the user a choice ?>
          <tr>
          <td colspan='2' class='wpsc_gateway_container'>
+	<h2>Payment Details</h2>
             <h3><?php _e('Payment Type', 'wpsc');?></h3>
 
             <?php while (wpsc_have_gateways()) : wpsc_the_gateway(); ?>
@@ -425,6 +427,7 @@ endif;
             </tr></td>
          <?php else: // otherwise, there is no choice, stick in a hidden form ?>
             <tr><td colspan="2" class='wpsc_gateway_container'>
+	<h2>Payment Details</h2>
             <h3><?php _e('Payment Type', 'wpsc');?></h3>
 
             <?php while (wpsc_have_gateways()) : wpsc_the_gateway(); ?>
@@ -441,9 +444,7 @@ endif;
          </td>
          </tr>
          <?php endif; ?>
-	<?php if ($is_subscriber): ?></table><table class="wpsc_checkout_table table-4">
-            <h3><?php _e('Payment Type', 'wpsc');?></h3>
-<p>You have a corporate subscription, there is no single charge.</p><p>&nbsp;</p><?php endif; ?>
+	<?php if ($is_prepaid): ?></table><table class="wpsc_checkout_table table-4"><?php endif; ?>
 
       <?php if(wpsc_has_tnc()) : ?>
          <tr>
@@ -490,7 +491,7 @@ endif;
       <?php _e('Total Price', 'wpsc'); ?>:
       </td>
       <td class='wpsc_totals'>
-         <span id='checkout_total' class="pricedisplay checkout-total"><?php echo wpsc_cart_total(); ?></span>
+	 <span id='checkout_total' class="pricedisplay checkout-total"><?php if ($is_prepaid): ?>&nbsp;(Prepaid subscriber) $0.00<?php else: echo wpsc_cart_total(); endif; ?></span>
       </td>
    </tr>
    </table>

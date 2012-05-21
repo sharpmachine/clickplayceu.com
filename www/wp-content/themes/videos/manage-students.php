@@ -102,4 +102,6 @@ if ($count == 0): ?>
 		<p id="reg_passmail"><?php _e('A password will be e-mailed to the student.') ?></p>
 		<p class="submit"><input tabindex="4" type="submit" name="wp-submit" id="wp-submit" value="<?php _e('Register'); ?>" tabindex="100" /></p>
 	</form>
+<?php else: ?>
+	<script>window.location = <?php echo json_encode(get_site_url(null, '/products-page/your-account')); ?>;</script>
 <?php endif; ?>
