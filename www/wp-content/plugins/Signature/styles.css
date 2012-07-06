@@ -1,0 +1,39 @@
+ body {
+  	font-family:Verdana;
+  	font-size:12px;
+  }
+ #overlay {
+     visibility: hidden;
+     position: relative;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     margin-top:-400px;
+	}
+.save {
+   border:solid 1px #DCDCDC;
+   padding:2px;
+   background-color: #7AC142;
+   font-size:14px;
+   color: #FFFFFF;
+   font-weight:bold;
+ }   
+.cancel {
+   border:solid 1px #DCDCDC;
+   padding:2px;
+   background-color: #7AC142;
+   font-size:14px;
+   color: #FFFFFF;
+   font-weight:bold;
+ }   
+ #divSign {
+   width:220px;
+   height:120px;
+   border: dotted 2px blue; 
+   position:relative;
+   margin-top:-160px;
+   margin-left:20px;
+   cursor:pointer;
+   display:"";
+ }
+     

@@ -1,0 +1,70 @@
+/*
+jQuery Coda-Slider v2.0 - http://www.ndoherty.biz/coda-slider
+Copyright (c) 2009 Niall Doherty
+This plugin available for use in all personal or commercial projects under both MIT and GPL licenses.
+*/
+
+.coda-slider, .coda-slider .panel {
+width: 960px;
+} 
+
+.coda-slider-wrapper.arrows .coda-slider, .coda-slider-wrapper.arrows .coda-slider .panel {
+width: 960px;
+}
+
+#coda-nav {
+width: 960px;
+position: relative;
+}
+
+.coda-nav-left a {
+background: url(http://clickplayceu.com/wp-content/themes/videos/scripts/coda-slider/images/left-alt.png) 0 0;
+position: absolute;
+width: 46px;
+height: 46px;
+top: 0;
+left: -35px;
+z-index: 500000;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+}
+
+.coda-nav-left a:hover {
+background: url(http://clickplayceu.com/wp-content/themes/videos/scripts/coda-slider/images/left-alt.png) 0 -46px;
+}
+
+.coda-nav-right a {
+background: url(http://clickplayceu.com/wp-content/themes/videos/scripts/coda-slider/images/right-alt.png) 0 0;
+position: absolute;
+width: 46px;
+height: 46px;
+top: 0;
+right: -35px;
+z-index: 500000;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+}
+
+.coda-nav-right a:hover {
+background: url(http://clickplayceu.com/wp-content/themes/videos/scripts/coda-slider/images/right-alt.png) 0 -46px;
+}
+
+.coda-slider-wrapper {
+clear: both;
+overflow: auto;
+}
+
+.coda-slider {
+float: left;
+overflow: hidden;
+position: relative;
+}
+
+.coda-slider .panel {
+display: block;
+float: left;
+}
+
+.coda-slider .panel-container {
+position: relative;
+}

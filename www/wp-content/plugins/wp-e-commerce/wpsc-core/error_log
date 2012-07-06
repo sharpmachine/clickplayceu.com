@@ -1,0 +1,2 @@
+[05-Mar-2012 01:08:22] PHP Fatal error:  Call to undefined function  add_filter() in /home/clickceu/public_html/wp-content/plugins/wp-e-commerce/wpsc-core/wpsc-functions.php on line 13
+[05-Mar-2012 01:08:32] PHP Fatal error:  Call to undefined function  add_filter() in /home/clickceu/public_html/wp-content/plugins/wp-e-commerce/wpsc-core/wpsc-deprecated.php on line 45
